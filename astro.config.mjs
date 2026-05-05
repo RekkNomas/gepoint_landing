@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.gpsolution.es',
+  site: process.env.SITE_URL ?? 'https://www.gpsolution.es',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]

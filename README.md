@@ -14,20 +14,23 @@ npm install
 npm run dev
 ```
 
-## Despliegue automático en Cloudflare Pages
+## Despliegue en Cloudflare Pages
 
-Este repo queda listo para desplegar en Cloudflare Pages con GitHub Actions.
+El proyecto puede conectarse directo a Cloudflare Pages desde GitHub.
 
-### Secrets requeridos
+### Variables recomendadas
 
-- `CLOUDFLARE_ACCOUNT_ID`
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_PAGES_PROJECT_NAME`
+- `SITE_URL=https://www.gpsolution.es`
+
+### Archivo de configuración
+
+- `wrangler.jsonc` define `pages_build_output_dir` y la URL base del sitio.
 
 ### Flujo
 
-- Cada push a `master` o `main` ejecuta build y despliegue.
+- Cloudflare Pages toma `main` como rama de producción.
 - El output publicado es `dist/`.
+- Canonical, OG y sitemap usan `SITE_URL` si está definida.
 
 ## Stack
 
