@@ -1,0 +1,76 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Tarjeta de Presentación | GP Cloud Solution"
+  description="Tarjeta de presentación comercial de GP Cloud Solution para clientes logísticos."
+>
+  <main class="presentation-shell">
+    <section class="mx-auto max-w-6xl px-5 lg:px-8 py-10 presentation-nonprint">
+      <div class="mb-8 flex flex-wrap items-center justify-between gap-4 presentation-toolbar">
+        <div>
+          <p class="section-kicker">Material comercial</p>
+          <h1 class="text-3xl md:text-5xl font-black text-white tracking-tight">Tarjeta de presentación</h1>
+          <p class="mt-4 max-w-3xl text-brand-muted">
+            Diseño corporativo alineado con el estilo visual de la web, listo para compartir con clientes.
+          </p>
+        </div>
+        <button class="btn-primary" onclick="window.print()">Descargar PDF</button>
+      </div>
+    </section>
+
+    <section class="presentation-print-stage">
+      <article class="presentation-card presentation-card-front">
+        <div class="presentation-card-overlay"></div>
+        <div class="presentation-card-content">
+          <div class="presentation-front-left">
+            <img src="/assets/getpoint/logo-correct.webp" alt="GP Cloud Solution" class="presentation-logo" />
+            <p class="presentation-subtitle">Warehouse Management System</p>
+            <h2 class="presentation-front-title">Control logístico con trazabilidad real</h2>
+            <p class="presentation-copy">
+              Plataforma WMS cloud para recepción, inventario, picking, embalaje y despacho.
+            </p>
+          </div>
+
+          <div class="presentation-front-right">
+            <h3 class="presentation-name">Gerarld Zamorano S.</h3>
+            <p class="presentation-role">Project Management · Consultor en Logística</p>
+            <ul class="presentation-list">
+              <li>Optimización logística y soluciones digitales</li>
+              <li>Implementación operativa de WMS</li>
+              <li>Ingeniería en Administración Industrial</li>
+            </ul>
+            <div class="presentation-contact">
+              <p><strong>Tel:</strong> (+34) 613 189 632</p>
+              <p><strong>Email:</strong> info@gpsolution.es</p>
+              <p><strong>Web:</strong> www.gpsolution.es</p>
+              <p><strong>Ubicación:</strong> Málaga, Andalucía, España</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="presentation-card presentation-card-back">
+        <div class="presentation-card-overlay"></div>
+        <div class="presentation-card-content presentation-card-content-back">
+          <h2 class="presentation-cycle-title">Toma el control de tu operación logística</h2>
+          <p class="presentation-copy mb-6">
+            GP Cloud Solution integra los procesos clave del almacén en una sola capa operativa:
+          </p>
+          <div class="presentation-tags">
+            <span>Recepción de ingresos</span>
+            <span>Almacén y acopio</span>
+            <span>Picking de pedidos</span>
+            <span>Packing y embalaje</span>
+            <span>Gestión de rutas</span>
+            <span>Despacho y control en ruta</span>
+          </div>
+          <div class="presentation-back-footer">
+            <p>Solicitá una demo: <strong>info@gpsolution.es</strong></p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</MainLayout>

@@ -1,0 +1,76 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Política de Cookies | GP Cloud Solution"
+  description="Política de cookies de GP Cloud Solution conforme al marco normativo español y europeo."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Inicio',
+        item: 'https://www.gpsolution.es/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Cookies',
+        item: 'https://www.gpsolution.es/cookies'
+      }
+    ]
+  })} />
+  <main class="legal-shell">
+    <section class="mx-auto max-w-4xl px-5 lg:px-8">
+      <div class="legal-card">
+        <p class="section-kicker">Legal</p>
+        <h1 class="legal-title">Política de Cookies</h1>
+        <div class="legal-copy">
+          <p><strong>Última actualización:</strong> {new Date().toLocaleDateString('es-ES')}</p>
+
+          <h2>1. ¿Qué son las cookies?</h2>
+          <p>
+            Las cookies son archivos pequeños que se almacenan en tu navegador y permiten recordar información sobre tu visita.
+          </p>
+
+          <h2>2. Tipos de cookies que podemos usar</h2>
+          <p>
+            Podemos utilizar cookies técnicas (necesarias para el funcionamiento del sitio), de preferencias y, cuando se habiliten,
+            cookies de analítica para mejorar rendimiento y experiencia de uso.
+          </p>
+
+          <h2>3. Base legal y consentimiento</h2>
+          <p>
+            Las cookies técnicas se instalan por interés legítimo funcional. Las cookies no esenciales se activan únicamente con
+            consentimiento previo de la persona usuaria, conforme a la normativa aplicable.
+          </p>
+
+          <h2>4. Gestión y desactivación</h2>
+          <p>
+            Podés configurar o bloquear cookies desde tu navegador. Tené en cuenta que desactivar algunas cookies puede afectar el
+            correcto funcionamiento de determinadas funcionalidades del sitio.
+          </p>
+
+          <h2>5. Actualizaciones</h2>
+          <p>
+            Esta política puede actualizarse para reflejar cambios técnicos o legales. Recomendamos revisar esta página periódicamente.
+          </p>
+
+          <h2>6. Contacto</h2>
+          <p>
+            Para dudas sobre esta política, escribinos a <a href="mailto:info@gpsolution.es">info@gpsolution.es</a>.
+          </p>
+
+          <h2>7. Desarrollo del sitio</h2>
+          <p>
+            Este sitio web fue desarrollado por <a href="https://solucionai.cl" target="_blank" rel="noreferrer">SolucionAI</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>

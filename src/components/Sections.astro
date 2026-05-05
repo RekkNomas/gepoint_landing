@@ -1,0 +1,267 @@
+---
+// Sections component
+
+const clientLogos = [
+  { name: 'La Fete', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0012_lafete.png', bg: '#ffffff' },
+  { name: 'Entre Lagos', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0014_entrelagos.png', bg: '#f8f8f8' },
+  { name: 'DBS', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0015_DBS.png', bg: '#f8f8f8' },
+  { name: 'Makeup', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0011_makeup.png', bg: '#f8f8f8' },
+  { name: 'Vigaflow', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0002_vigaflow.png', bg: '#f8f8f8' },
+  { name: 'Toyota', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0023_toyota.png', bg: '#f8f8f8' },
+  { name: 'Chilexpress', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0018_chilexpress.png', bg: '#f8f8f8' },
+  { name: 'Romeral', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0004_romeral.png', bg: '#f8f8f8' },
+  { name: 'Portland', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0006_portland.png', bg: '#f8f8f8' },
+  { name: 'NCR', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0008_NCR.png', bg: '#f8f8f8' },
+  { name: 'Novapet', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0007_novapet.png', bg: '#f8f8f8' },
+  { name: 'Anencomiendas', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0021_anencomiendas.png', bg: '#ffffff' },
+  { name: 'Coagra', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0017_coagra.png', bg: '#f8f8f8' },
+  { name: 'Termodinámica', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0003_termodinamica.png', bg: '#f8f8f8' },
+  { name: 'NB', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0009_NB.png', bg: '#f8f8f8' },
+  { name: 'AlcaChile', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0022_alcachile.png', bg: '#f8f8f8' },
+  { name: 'California', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0019_california.png', bg: '#ffffff' },
+  { name: 'Premium Brands', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0005_PremiumBrands.png', bg: '#f8f8f8' },
+  { name: 'Capa 1', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0016_Capa-1.png', bg: '#cacaca' },
+  { name: 'Zarzar', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0001_zarzar.png', bg: '#f8f8f8' },
+  { name: 'Better Commerce', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0020_bettercommerce.png', bg: '#f8f8f8' },
+  { name: 'Molinokunsmann', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0010_molinokunsmann.png', bg: '#f8f8f8' },
+  { name: 'Grupo Vita', src: 'https://www.getpoint.cl/wp-content/uploads/2024/12/clientes__0013_grupovita.png', bg: '#f8f8f8' },
+];
+
+const marqueeGroups = [clientLogos, clientLogos, clientLogos];
+---
+
+<!-- Social Proof / Logos -->
+<section class="social-proof-section overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="social-proof-header reveal">
+      <p class="social-proof-heading">Operamos a nivel global en almacenes de alta exigencia</p>
+    </div>
+    
+    <div class="logo-strip-container reveal">
+      <div class="logo-strip">
+        {marqueeGroups.map((group, groupIndex) => (
+          <div class="logo-strip-group" aria-hidden={groupIndex > 0}>
+            {group.map((client) => (
+              <div class="logo-item flex-none border px-6 py-4" style={`background-color: ${client.bg};`}>
+                <img src={client.src} alt={groupIndex === 0 ? client.name : ''} loading={groupIndex === 0 ? 'eager' : 'lazy'} decoding="async" class="logo-strip-image block h-10 w-auto max-w-none object-contain" />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Bento Grid -->
+<section id="funcionalidades" class="section-shell capabilities-section">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="capabilities-heading reveal">
+      <div>
+        <h2>Arquitectura operativa para almacenes exigentes.</h2>
+        <p>Recepción, inventario, preparación y despacho coordinados sobre una misma capa de trazabilidad operativa.</p>
+      </div>
+    </div>
+
+    <div class="capabilities-grid">
+      <article class="capability-card capability-card-main reveal">
+        <div class="capability-card-bg"></div>
+        <div class="capability-main-stack">
+          <div class="capability-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="capability-main-copy">
+            <p class="capability-eyebrow">Módulo central</p>
+            <h3>Inventario gobernado desde el primer movimiento.</h3>
+            <p>GP Cloud Solution consolida stock, ubicaciones, lotes y estados operativos para que cada ajuste, recepción o salida quede trazado con contexto completo.</p>
+          </div>
+        </div>
+        <div class="capability-ledger">
+          <div>
+            <strong>Stock unificado</strong>
+            <p>Visibilidad por SKU, ubicación y estado.</p>
+          </div>
+          <div>
+            <strong>Lotes y series</strong>
+            <p>Trazabilidad lista para auditoría.</p>
+          </div>
+          <div>
+            <strong>Movimientos auditables</strong>
+            <p>Registro de usuario, fecha y operación.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="capability-card reveal delay-100">
+        <div class="capability-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="bento-title">Recepción</h3>
+        <p class="bento-desc">Valida ingresos contra órdenes de compra, registra lotes y asigna ubicación desde el primer movimiento.</p>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
+        </div>
+        <h3 class="bento-title">Preparación</h3>
+        <p class="bento-desc">Rutas de picking guiadas para reducir caminatas, errores y tiempos improductivos dentro del almacén.</p>
+      </article>
+
+      <article class="capability-card reveal delay-100">
+        <div class="capability-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 class="bento-title">Despacho</h3>
+        <p class="bento-desc">Auditoría final, etiquetas, packing lists y validación de salida antes de que el pedido abandone el muelle.</p>
+      </article>
+
+      <article class="capability-card reveal delay-200">
+        <div class="capability-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3 class="bento-title">Integración ERP</h3>
+        <p class="bento-desc">APIs para sincronizar maestros, pedidos y stock con SAP, Microsoft Dynamics u otros sistemas core.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios (Dark Split) -->
+<section id="beneficios" class="benefits-section pattern-grid-dark py-24 lg:py-32 relative">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="grid lg:grid-cols-[1fr_1fr] gap-16 items-center">
+      
+      <div class="reveal">
+        <div class="section-kicker">ROI comprobado</div>
+        <h2 class="section-title-dark">Una operación diseñada para escalar sin romperse.</h2>
+        <p class="section-copy-dark">El valor no está en “digitalizar por digitalizar”, sino en lograr control real y auditable sobre cada movimiento. Transformá tu almacén de un centro de costos a una ventaja competitiva.</p>
+        
+        <div class="mt-10 grid sm:grid-cols-2 gap-6">
+          <div class="spec-cell">
+            <div class="text-4xl font-black text-white mb-1">-40%</div>
+            <div class="text-sm font-medium text-white/60">Reducción en errores<br/>de preparación</div>
+          </div>
+          <div class="spec-cell">
+            <div class="text-4xl font-black text-white mb-1">98%</div>
+            <div class="text-sm font-medium text-white/60">Exactitud de<br/>inventario general</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 relative reveal delay-200">
+        <article class="benefit-card">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-shrink-0 text-white">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <strong class="block text-lg font-bold text-white mb-2">Control Absoluto</strong>
+              <span class="text-sm leading-relaxed text-white/70">Trazabilidad de lo que entra, dónde se almacena, quién lo mueve y cuándo sale. Todo queda registrado en logs auditables.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="benefit-card">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-shrink-0 text-white">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-lg font-bold text-white mb-2">Visibilidad en Tiempo Real</strong>
+              <span class="text-sm leading-relaxed text-white/70">Dashboards operativos para líderes de almacén. Información accionable para decidir rápido y reasignar recursos al instante.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="benefit-card">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-shrink-0 text-white">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 13 9 20 9"/><path d="M22 11v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9l9 9z"/></svg>
+            </div>
+            <div>
+              <strong class="block text-lg font-bold text-white mb-2">Crecimiento Estructurado</strong>
+              <span class="text-sm leading-relaxed text-white/70">Procesos estandarizados que facilitan la incorporación de nuevos operarios y la apertura de nuevos centros de distribución.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Diagnóstico -->
+<section id="contacto" class="section-shell contact-section">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8 relative z-10">
+    <div class="contact-panel reveal">
+      <div class="grid lg:grid-cols-[1fr_1fr]">
+        
+        <!-- Contact Info Side -->
+        <div class="p-10 lg:p-16 border-b lg:border-b-0 lg:border-r border-brand-line">
+          <div class="section-kicker">Contacto Directo</div>
+          <h2 class="text-3xl font-bold leading-tight text-white mb-4">Agendá un diagnóstico operativo.</h2>
+          <p class="text-brand-muted mb-10">Sin compromisos ni presentaciones comerciales eternas. Revisamos tu flujo actual y te mostramos exactamente cómo el WMS puede optimizarlo.</p>
+          
+          <ul class="space-y-5 mb-12">
+            <li class="flex items-start gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-brand-primary mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-sm font-light text-brand-muted">Análisis de cuellos de botella actuales.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-brand-primary mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-sm font-light text-brand-muted">Propuesta de arquitectura, etapas y tiempos.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-brand-primary mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-sm font-light text-brand-muted">Estimación de ROI según tu volumetría operativa.</span>
+            </li>
+          </ul>
+
+          <div class="contact-email-card">
+            <div class="w-12 h-12 rounded-full bg-brand-card border border-brand-line flex items-center justify-center text-white">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase text-brand-muted mb-1">Escribinos directo</p>
+              <a href="mailto:info@gpsolution.es" class="text-sm font-bold text-white hover:text-brand-muted transition-colors">info@gpsolution.es</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Side -->
+        <div class="contact-form-panel">
+          <form action="mailto:info@gpsolution.es" method="post" enctype="text/plain" class="grid gap-7">
+            <div class="grid gap-7 sm:grid-cols-2">
+              <div>
+                <label class="form-label">Nombre completo</label>
+                <input name="nombre" type="text" required class="form-input form-input-lg" placeholder="Ej. Juan Pérez" />
+              </div>
+              <div>
+                <label class="form-label">Empresa</label>
+                <input name="empresa" type="text" required class="form-input form-input-lg" placeholder="Nombre de tu empresa" />
+              </div>
+            </div>
+            
+            <div>
+              <label class="form-label">Correo corporativo</label>
+              <input name="email" type="email" required class="form-input form-input-lg" placeholder="juan@empresa.com" />
+            </div>
+
+            <div>
+              <label class="form-label">Cuéntanos sobre tu operación</label>
+              <textarea name="mensaje" rows="6" required class="form-input form-input-lg resize-y" placeholder="¿Qué ERP usas? ¿Cuántos SKUs manejas? ¿Cuál es tu mayor desafío hoy?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full mt-2">
+               Solicitar diagnóstico operativo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <p class="text-[0.65rem] text-center text-brand-muted">Al enviar este formulario, aceptás nuestra política de privacidad.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

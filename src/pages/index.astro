@@ -1,17 +1,46 @@
 ---
-
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import Sections from '../components/Sections.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '¿Qué es GP Cloud Solution?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GP Cloud Solution es una plataforma WMS cloud para gestionar recepción, inventario, preparación y despacho con trazabilidad operativa en tiempo real.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Con qué sistemas se puede integrar?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'La plataforma permite integraciones mediante APIs con ERP como SAP, Microsoft Dynamics y otros sistemas core de operación.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Cómo solicito una evaluación?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Podés solicitar un diagnóstico operativo desde el formulario de contacto para revisar tu flujo actual y estimar mejoras.'
+        }
+      }
+    ]
+  })} />
+  <Header />
+  <main>
+    <HeroSlider />
+    <Sections />
+  </main>
+  <Footer />
+</MainLayout>

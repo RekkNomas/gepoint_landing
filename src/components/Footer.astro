@@ -1,0 +1,68 @@
+---
+// Footer component
+---
+<footer class="footer-section pt-20 pb-10 text-white relative overflow-hidden border-t border-brand-line">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+      
+      <!-- Brand & About (Span 4) -->
+      <div class="lg:col-span-4">
+        <img src="/assets/getpoint/logo-correct.webp" alt="GP Cloud Solution" width="220" height="70" class="mb-6 h-12 w-auto object-contain" loading="lazy" />
+        <p class="text-sm text-white/60 leading-relaxed max-w-sm mb-8">
+          GP Cloud Solution centraliza recepción, inventario y despacho para reducir errores operativos y escalar tu centro de distribución con control real.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="w-12 h-12 rounded-full bg-brand-card border border-brand-line flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation (Span 3) -->
+      <div class="lg:col-span-3 lg:col-start-6">
+        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white mb-6">Plataforma</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li><a href="/#funcionalidades" class="hover:text-white transition-colors">Características WMS</a></li>
+          <li><a href="/#beneficios" class="hover:text-white transition-colors">Beneficios y ROI</a></li>
+          <li><a href="/#contacto" class="hover:text-white transition-colors">Solicitar diagnóstico</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact (Span 4) -->
+      <div class="lg:col-span-4">
+        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white mb-6">Contacto Comercial</h4>
+        <ul class="space-y-4 text-sm text-white/70">
+          <li class="flex items-start gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-brand-muted mt-0.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@gpsolution.es" class="hover:text-white transition-colors">info@gpsolution.es</a>
+          </li>
+        </ul>
+        <div class="mt-8 flex items-center gap-3">
+          <div class="inline-flex items-center gap-2 border border-brand-line bg-brand-card px-3 py-1.5 text-[0.65rem] font-bold tracking-widest text-white/50">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            ISO 9001
+          </div>
+          <div class="inline-flex items-center gap-2 border border-brand-line bg-brand-card px-3 py-1.5 text-[0.65rem] font-bold tracking-widest text-white/50">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            ISO 27001
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
+      <div class="text-xs text-white/40">
+        © {new Date().getFullYear()} GP Cloud Solution. Todos los derechos reservados.
+        <span class="mx-2">•</span>
+        Desarrollado por <a href="https://solucionai.cl" target="_blank" rel="noreferrer" class="hover:text-white transition-colors">SolucionAI</a>
+      </div>
+      <div class="flex gap-6 text-xs text-white/40">
+        <a href="/aviso-legal" class="hover:text-white transition-colors">Aviso legal</a>
+        <a href="/privacidad" class="hover:text-white transition-colors">Privacidad</a>
+        <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

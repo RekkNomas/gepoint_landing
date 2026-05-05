@@ -1,0 +1,83 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Aviso Legal | GP Cloud Solution"
+  description="Aviso legal de GP Cloud Solution para el uso del sitio web y sus contenidos."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Inicio',
+        item: 'https://www.gpsolution.es/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Aviso legal',
+        item: 'https://www.gpsolution.es/aviso-legal'
+      }
+    ]
+  })} />
+  <main class="legal-shell">
+    <section class="mx-auto max-w-4xl px-5 lg:px-8">
+      <div class="legal-card">
+        <p class="section-kicker">Legal</p>
+        <h1 class="legal-title">Aviso Legal</h1>
+        <div class="legal-copy">
+          <p><strong>Última actualización:</strong> {new Date().toLocaleDateString('es-ES')}</p>
+
+          <h2>1. Identificación</h2>
+          <p>
+            Este sitio web pertenece a GP Cloud Solution. El uso de la web implica la aceptación de las presentes condiciones.
+          </p>
+
+          <h2>2. Objeto</h2>
+          <p>
+            La web ofrece información sobre soluciones WMS y canales de contacto comercial para diagnóstico y evaluación de servicios.
+          </p>
+
+          <h2>3. Condiciones de uso</h2>
+          <p>
+            La persona usuaria se compromete a utilizar el sitio de forma lícita, respetando la normativa vigente y evitando acciones
+            que puedan afectar la seguridad, disponibilidad o integridad del portal.
+          </p>
+
+          <h2>4. Propiedad intelectual e industrial</h2>
+          <p>
+            Los contenidos, diseño, textos, marcas, gráficos y código del sitio están protegidos por derechos de propiedad intelectual
+            e industrial. Queda prohibida su reproducción o distribución sin autorización previa, salvo usos legalmente permitidos.
+          </p>
+
+          <h2>5. Responsabilidad</h2>
+          <p>
+            GP Cloud Solution no garantiza la ausencia total de errores o interrupciones, aunque aplica medidas razonables para
+            mantener el servicio actualizado y operativo.
+          </p>
+
+          <h2>6. Enlaces externos</h2>
+          <p>
+            Este sitio puede incluir enlaces a terceros. GP Cloud Solution no se responsabiliza del contenido, políticas o prácticas
+            de esos sitios externos.
+          </p>
+
+          <h2>7. Legislación y jurisdicción</h2>
+          <p>
+            Este aviso se rige por la normativa aplicable en España y la Unión Europea. Cualquier controversia se someterá a los
+            juzgados y tribunales competentes conforme a derecho.
+          </p>
+
+          <h2>8. Desarrollo del sitio</h2>
+          <p>
+            Sitio diseñado y desarrollado por <a href="https://solucionai.cl" target="_blank" rel="noreferrer">SolucionAI</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>

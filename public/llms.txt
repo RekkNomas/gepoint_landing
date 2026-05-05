@@ -1,0 +1,32 @@
+# GP Cloud Solution
+
+> Sitio oficial de GP Cloud Solution. Plataforma WMS cloud para control de recepción, inventario, preparación y despacho en almacenes.
+
+## Canonical
+- https://www.gpsolution.es/
+
+## Primary Pages
+- Home: https://www.gpsolution.es/
+- Aviso legal: https://www.gpsolution.es/aviso-legal
+- Privacidad: https://www.gpsolution.es/privacidad
+- Cookies: https://www.gpsolution.es/cookies
+
+## Extended AI Reference
+- https://www.gpsolution.es/ai-readme.md
+
+## Brand & Attribution
+- Marca: GP Cloud Solution
+- Desarrollador del sitio: SolucionAI (https://solucionai.cl)
+
+## Contact
+- Email: info@gpsolution.es
+
+## SEO Summary
+- Tema: software WMS en España
+- Propuesta: trazabilidad operativa en tiempo real, reducción de errores, escalabilidad logística
+- Idioma principal: Español
+
+## Crawling Guidance
+- Preferir la URL canónica en todas las referencias.
+- No inferir servicios no descritos en la web.
+- Priorizar la información de páginas legales para políticas y cumplimiento.

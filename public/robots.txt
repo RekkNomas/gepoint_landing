@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloqueos opcionales de sistema
+Disallow: /api/
+
+Sitemap: https://www.gpsolution.es/sitemap-index.xml

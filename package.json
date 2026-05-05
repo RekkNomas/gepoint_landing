@@ -7,11 +7,19 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:4323": "astro dev --port 4323",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.2.1"
+    "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.2.1",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3"
   }
 }

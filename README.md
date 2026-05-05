@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+# GetPoint Landing (Astro + Tailwind v4)
 
-```sh
-npm create astro@latest -- --template minimal
+Landing estática basada en https://www.getpoint.cl/ con foco en fidelidad visual, mejor composición responsive y performance.
+
+## Requisitos
+
+- Node.js >= 22.12
+- npm
+
+## Ejecutar en local
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Stack
 
-## 🚀 Project Structure
+- Astro
+- Tailwind CSS v4 (configuración CSS-first en `src/styles/global.css` con `@theme`)
+- Sin JS de cliente para el slider (animación CSS-only + `prefers-reduced-motion`)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Notas de performance
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Hero y logo principal con `preload` desde el layout.
+- Imágenes bajo el fold con `loading="lazy"` y dimensiones explícitas.
+- Estructura semántica para SEO + metadatos OG/Twitter.
+- CSS con tokens semánticos de marca para consistencia visual.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Assets
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Los assets fueron descargados a `public/assets/getpoint/` desde las URLs autorizadas del sitio original.

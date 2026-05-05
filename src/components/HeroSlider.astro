@@ -1,0 +1,91 @@
+---
+// Hero component
+---
+<section id="inicio" class="hero-section hero-gradient-bg relative min-h-[88vh] flex items-center pt-28 pb-20 lg:pb-24 overflow-hidden">
+  <div class="hero-ambient-video" aria-hidden="true">
+    <video class="hero-video-slide hero-video-slide-one" autoplay muted loop playsinline preload="metadata">
+      <source src="/assets/getpoint/hero-video-1-optimized.mp4" type="video/mp4" />
+    </video>
+    <video class="hero-video-slide hero-video-slide-two" autoplay muted loop playsinline preload="metadata">
+      <source src="/assets/getpoint/hero-video-2-optimized.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-video-wash"></div>
+  </div>
+
+  <!-- Engineering grid -->
+  <div class="absolute inset-0 pattern-grid opacity-70"></div>
+
+  <div class="mx-auto w-full max-w-7xl px-5 lg:px-8 relative z-10">
+    <div class="hero-grid grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      
+      <!-- Content Left -->
+      <div class="hero-copy flex flex-col max-w-3xl reveal">
+        <h1 class="hero-title text-brand-ink">
+          Controla cada movimiento de tu almacén.
+        </h1>
+        
+        <p class="hero-lead mt-7 text-lg md:text-xl leading-relaxed text-brand-muted max-w-[38rem]">
+          WMS cloud que reduce errores operativos hasta un 40%, centralizando recepción, inventario y despacho con trazabilidad en tiempo real.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#contacto" class="btn-primary btn-glow">
+            Solicitar demo gratuita
+          </a>
+          <a href="#funcionalidades" class="btn-secondary group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:scale-110 text-brand-primary"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Ver plataforma
+          </a>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="hero-trust mt-12 pt-7 border-t border-brand-line flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div class="flex items-center gap-2">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full bg-brand-line border-2 border-white flex items-center justify-center text-[10px] font-bold text-brand-muted">ISO</div>
+              <div class="w-8 h-8 rounded-full bg-brand-line border-2 border-white flex items-center justify-center text-[10px] font-bold text-brand-muted">9001</div>
+            </div>
+            <span class="text-xs font-semibold text-brand-muted">Certificación<br/>de calidad</span>
+          </div>
+          <div class="h-8 w-px bg-brand-line hidden sm:block"></div>
+          <div class="flex items-center gap-3">
+            <div class="text-2xl font-black text-brand-ink">98%</div>
+            <span class="text-xs font-semibold text-brand-muted leading-tight">Precisión de<br/>inventario</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Right (Product as Hero) -->
+      <div class="hero-visual-wrapper reveal delay-200">
+        <!-- Operational proof -->
+        <div class="product-chip-panel hero-chip animate-[fadeInUp_1s_ease-out_0.5s_both]">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-accent/20 text-brand-accent">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <p class="text-[0.65rem] font-bold uppercase tracking-wider text-brand-muted">Picking</p>
+            <p class="text-sm font-black text-brand-ink">Orden completada con éxito</p>
+          </div>
+        </div>
+
+        <div class="hero-mockup-glow"></div>
+        <div class="product-frame hero-product-frame">
+          <div class="product-frame-topbar">
+            <div class="product-frame-dots"><span></span><span></span><span></span></div>
+            <p class="product-frame-title">Plataforma WMS</p>
+          </div>
+          <div class="product-frame-screen hero-product-screen">
+            <img 
+              src="/assets/getpoint/wms-mockup.webp" 
+              alt="Dashboard WMS GP Cloud Solution" 
+              width="800" 
+              height="600" 
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
