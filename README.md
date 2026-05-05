@@ -14,6 +14,24 @@ npm install
 npm run dev
 ```
 
+## Despliegue en Cloudflare Pages
+
+El proyecto puede conectarse directo a Cloudflare Pages desde GitHub.
+
+### Variables recomendadas
+
+- `SITE_URL=https://www.gpsolution.es`
+
+### Archivo de configuración
+
+- `wrangler.jsonc` define `pages_build_output_dir` y la URL base del sitio.
+
+### Flujo
+
+- Cloudflare Pages toma `main` como rama de producción.
+- El output publicado es `dist/`.
+- Canonical, OG y sitemap usan `SITE_URL` si está definida.
+
 ## Stack
 
 - Astro
