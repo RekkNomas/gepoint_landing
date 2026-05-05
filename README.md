@@ -14,6 +14,21 @@ npm install
 npm run dev
 ```
 
+## Despliegue automático en Cloudflare Pages
+
+Este repo queda listo para desplegar en Cloudflare Pages con GitHub Actions.
+
+### Secrets requeridos
+
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_PAGES_PROJECT_NAME`
+
+### Flujo
+
+- Cada push a `master` o `main` ejecuta build y despliegue.
+- El output publicado es `dist/`.
+
 ## Stack
 
 - Astro
