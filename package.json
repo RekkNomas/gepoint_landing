@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "dev:4323": "astro dev --port 4323",
     "build": "astro build",
+    "deploy": "wrangler deploy",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "wrangler": "^4.88.0",
     "typescript": "^5.9.3"
   }
 }
